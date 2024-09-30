@@ -4,13 +4,13 @@ import 'dart:math';
 
 void adivinaElNumero(int max){
   print('¡Bienvenido! Esto es ADIVINA EL NÚMERO, el juego en el que tendrás que adivinar el número \n que estoy pensando. Una pista: El número está comprendido entre 0 y 1000. ¿Cuál será?');
-  var numrnd = Random().nextInt(max);
+  var numrnd = Random().nextInt(max); //Creamos el número random indicando la cantidad maxima.
   String valor;
-  bool salida = false;
+  bool salida = false; //Para controlar la salida del programa
   int contador = 1;
   print('$numrnd');
   print('Intento $contador: ');
-  do{
+  do{ // Iniciamos un bucle con condicionales anidados.
     valor = stdin.readLineSync() ?? "0";
     int numact = int.tryParse(valor) ?? 0;
     if(numact == numrnd){
